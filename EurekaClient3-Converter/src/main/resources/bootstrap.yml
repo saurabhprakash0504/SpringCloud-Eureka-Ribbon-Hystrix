@@ -1,3 +1,11 @@
 spring:
   application:
     name: Third
+   
+
+second:
+  ribbon:
+    eureka:
+      enabled: true
+    listOfServers: localhost:9090,localhost:9091,localhost:8009,localhost:8007
+    ServerListRefreshInterval: 15000

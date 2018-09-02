@@ -19,7 +19,6 @@ public class SampleController {
 	RestTemplate restTemplate;
 	
 	//Direct Interaction between two servers
-	
 	@RequestMapping("/print")
 	String print() {
 		String response = restTemplate
@@ -33,7 +32,7 @@ public class SampleController {
 	@GetMapping("/degreeToFahrenheit/{degree}")
 	Double degreeToFahrenheit(@PathVariable int degree) {
 		double fahrenheit = (degree + 32) * (9 / 5 * 1.0);
-		System.out.println("This is first  temp <<<< degreeToFahrenheit >>> "+fahrenheit);
+		System.out.println("This is second temp <<<< degreeToFahrenheit >>> " + fahrenheit);
 		return fahrenheit;
 	}
 

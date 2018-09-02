@@ -1,5 +1,18 @@
-#spring.application.name=lab-4-eureka-server
+#Server Specifics
+server:
+  port: 8761
+error:
+    whitelabel:
+      enabled: false
 spring:
   application:
     name: eureka-server
- 
+#Eureka Specifics
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
